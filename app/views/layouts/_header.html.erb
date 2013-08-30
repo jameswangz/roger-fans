@@ -1,12 +1,12 @@
 	<header class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
-				<%= link_to 'Roger Fans', '#', id: 'logo' %>
+				<%= link_to (t :site_name), root_path, id: 'logo' %>
 				<nav>
 					<ul class="nav pull-right">
-						<li><%= link_to 'Videos',		'videos'	 %></li>
-						<li><%= link_to '简体中文',		'videos'	 %></li>
-						<li><%= link_to 'English',		'videos'	 %></li>
+						<li><%= link_to (t :videos),	videos_path	 %></li>
+						<li><%= link_to '简体中文',		"#{request.env['PATH_INFO']}?locale=zh-CN" %></li>
+						<li><%= link_to 'English',		"#{request.env['PATH_INFO']}?locale=en" %></li>
 					</ul>
 				</nav>
 			</div>

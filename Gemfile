@@ -1,5 +1,9 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org'
+group :development, :test do
+	source 'http://ruby.taobao.org'
+end
+group :production do
+	source 'https://rubygems.org'
+end
 ruby '2.0.0'
 #ruby-gemset=rails4
 
@@ -54,4 +58,6 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+# i18n gems
 gem 'http_accept_language'
+gem 'globalize3'

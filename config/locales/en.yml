@@ -20,5 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  site_name: 'Roger Fans Site'
   index_message: 'We all love Roger Federer!'
+  videos: 'Match Videos'
+  all_videos: 'All Match Videos'
