@@ -5,7 +5,7 @@ RogerFans::Application.routes.draw do
   	# You can have the root of your site routed with "root"
   	root 'home#index'
 
-	scope "(:locale)", locale: /en|zh-CN/ do
+	scope ":locale" do
 		resources :videos
 	end
 

@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 	before_action :set_locale
 
 	def default_url_options(options={})
-	  	{ locale: I18n.locale }
+		logger.debug "options === #{options}"
+	  	options.merge!( { locale: I18n.locale } )
 	end
 
 	private
@@ -18,7 +19,6 @@ class ApplicationController < ActionController::Base
     			locale = env.http_accept_language.compatible_language_from(available)
 			end
 			I18n.locale = locale || I18n.default_locale	
-			@current_path = request.env['PATH_INFO']
 		end
 
 end
