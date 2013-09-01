@@ -1,7 +1,6 @@
-group :development, :test do
+if ENV["RAILS_ENV"] == "development"
 	source 'http://ruby.taobao.org'
-end
-group :production do
+else
 	source 'https://rubygems.org'
 end
 ruby '2.0.0'
@@ -60,4 +59,6 @@ end
 
 # i18n gems
 gem 'http_accept_language'
-gem 'globalize3'
+gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
+gem 'paper_trail', github: 'airblade/paper_trail', branch: 'master'
+
