@@ -4,7 +4,7 @@ class Admin::MatchesController < ApplicationController
   # GET /admin/matches
   # GET /admin/matches.json
   def index
-    @admin_matches = Admin::Match.all
+    @admin_matches = Admin::Match.all.with_translations
   end
 
   # GET /admin/matches/1
@@ -69,6 +69,6 @@ class Admin::MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_match_params
-      params.require(:admin_match).permit(:ordinal)
+      params.require(:admin_match).permit(:ordinal, :name, :en_name, :cn_name)
     end
 end

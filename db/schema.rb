@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901154025) do
+ActiveRecord::Schema.define(version: 20130901154405) do
+
+  create_table "admin_match_translations", force: true do |t|
+    t.integer  "admin_match_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "admin_match_translations", ["admin_match_id"], name: "index_admin_match_translations_on_admin_match_id"
+  add_index "admin_match_translations", ["locale"], name: "index_admin_match_translations_on_locale"
 
   create_table "admin_matches", force: true do |t|
     t.integer  "ordinal"

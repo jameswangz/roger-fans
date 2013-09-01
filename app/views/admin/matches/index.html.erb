@@ -3,6 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>中文名</th>
       <th>Ordinal</th>
       <th></th>
       <th></th>
@@ -13,6 +15,8 @@
   <tbody>
     <% @admin_matches.each do |admin_match| %>
       <tr>
+        <td><%= admin_match.name('en') %></td>
+        <td><%= admin_match.name('zh-CN') %></td>
         <td><%= admin_match.ordinal %></td>
         <td><%= link_to 'Show', admin_match %></td>
         <td><%= link_to 'Edit', edit_admin_match_path(admin_match) %></td>
