@@ -1,0 +1,27 @@
+<h1>Listing admin_matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ordinal</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_matches.each do |admin_match| %>
+      <tr>
+        <td><%= admin_match.ordinal %></td>
+        <td><%= link_to 'Show', admin_match %></td>
+        <td><%= link_to 'Edit', edit_admin_match_path(admin_match) %></td>
+        <td><%= link_to 'Destroy', admin_match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match', new_admin_match_path %>
