@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901154405) do
+ActiveRecord::Schema.define(version: 20130902130251) do
 
   create_table "admin_match_translations", force: true do |t|
     t.integer  "admin_match_id", null: false
@@ -23,6 +23,27 @@ ActiveRecord::Schema.define(version: 20130901154405) do
 
   add_index "admin_match_translations", ["admin_match_id"], name: "index_admin_match_translations_on_admin_match_id"
   add_index "admin_match_translations", ["locale"], name: "index_admin_match_translations_on_locale"
+
+  create_table "admin_match_video_translations", force: true do |t|
+    t.integer  "admin_match_video_id", null: false
+    t.string   "locale",               null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "opponent"
+  end
+
+  add_index "admin_match_video_translations", ["admin_match_video_id"], name: "index_admin_match_video_translations_on_admin_match_video_id"
+  add_index "admin_match_video_translations", ["locale"], name: "index_admin_match_video_translations_on_locale"
+
+  create_table "admin_match_videos", force: true do |t|
+    t.integer  "match_id"
+    t.integer  "year"
+    t.integer  "round"
+    t.integer  "part"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_matches", force: true do |t|
     t.integer  "ordinal"
