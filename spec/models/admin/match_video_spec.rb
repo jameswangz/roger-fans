@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Admin::MatchVideo do
 
 	before do
-		@match1 = Admin::Match.create!(ordinal: 1) 
-		@match2 = Admin::Match.create!(ordinal: 2) 
+		@match1 = Admin::Match.create!(ordinal: 1, name: 'match1') 
+		@match2 = Admin::Match.create!(ordinal: 2, name: 'match2') 
 		@video_2013_match1_round1 =   @match1.videos.create!(year: 2013, round: 1) 
 		@video_2013_match1_round2 =   @match1.videos.create!(year: 2013, round: 2) 
 		@video_2013_match2_round1 =   @match2.videos.create!(year: 2013, round: 1) 

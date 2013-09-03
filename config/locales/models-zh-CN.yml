@@ -2,7 +2,15 @@ zh-CN:
   activerecord:
     models:
       admin/match: '比赛' 
+      admin/matchvideo: '比赛视频' 
     attributes:
       admin/match:
         ordinal: '序号'
         name: '名称'
+      admin/matchvideo:
+        year: '年份'
+        match: '赛事'
+        round: '轮次'
+        opponent: '对手'
+        part: '部分'
+        url: '地址'

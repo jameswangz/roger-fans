@@ -1,0 +1,21 @@
+<%= form_for(@admin_match_video) do |f| %>
+	<%= render 'shared/error_messages', object: f.object  %>
+
+  	<div class="field">
+    	<%= f.label :year %><br>
+    	<%= f.number_field :year %>
+    	<%= f.label :match %><br>
+		<%= f.select(:match_id, Admin::Match.all.map { |m| [m.name, m.id] }, prompt: true)%>
+    	<%= f.label :round %><br>
+    	<%= f.number_field :round %>
+    	<%= f.label :opponent %><br>
+    	<%= f.text_field :opponent %>
+    	<%= f.label :part %><br>
+    	<%= f.number_field :part %>
+    	<%= f.label :url %><br>
+    	<%= f.text_field :url %>
+  	</div>
+  	<div class="actions">
+    	<%= f.submit %>
+  	</div>
+<% end %>

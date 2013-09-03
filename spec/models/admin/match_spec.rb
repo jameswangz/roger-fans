@@ -4,7 +4,7 @@ describe Admin::Match do
 
 	describe 'videos dependent restrict' do
 		before do
-			@match = Admin::Match.create!(ordinal: 1) 
+			@match = Admin::Match.create!(ordinal: 1, name: 'test') 
 			@match.videos.create!(year: 2013, round: 1) 
 		end
 

@@ -7,7 +7,11 @@ RogerFans::Application.routes.draw do
   	root 'home#index'
 
 	scope "(:locale)", locale: /en|zh-CN/ do
-		resources :videos
+		resources :videos do
+			member do
+				get 'watch'
+			end
+		end
   		namespace :admin do
   		  resources :matches
   		  resources :match_videos
