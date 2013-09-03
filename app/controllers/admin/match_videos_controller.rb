@@ -1,4 +1,4 @@
-class Admin::MatchVideosController < ApplicationController
+class Admin::MatchVideosController < Admin::BaseController
   before_action :set_admin_match_video, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/match_videos

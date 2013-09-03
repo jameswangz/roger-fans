@@ -5,6 +5,7 @@
 				<nav>
 					<ul class="nav pull-right">
 						<li><%= link_to (t 'views.layouts.menu.videos'),	videos_path	 %></li>
+						<% if session[:admin]  %>
 						<li id="fat-menu" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								<%= t 'views.layouts.menu.admin_management' %><b class="caret"></b>
@@ -14,6 +15,7 @@
 								<li><%= link_to t( 'views.layouts.menu.match_videos_management'), admin_match_videos_path %><li>	
 							</ul>
 						</li>
+						<% end %>
 						<li><%= link_to '简体中文',		locale: 'zh-CN' %></li>
 						<li><%= link_to 'English',		locale: 'en' %></li>
 					</ul>
