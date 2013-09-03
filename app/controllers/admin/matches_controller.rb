@@ -1,5 +1,5 @@
 class Admin::MatchesController < Admin::BaseController
-  before_action :set_admin_match, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_match, only: [:show, :edit, :update, :destroy, :videos]
 
   # GET /admin/matches
   # GET /admin/matches.json
@@ -60,6 +60,12 @@ class Admin::MatchesController < Admin::BaseController
       format.json { head :no_content }
     end
   end
+	
+	def videos
+		@admin_match_videos = @admin_match.videos.ordered
+		render 'admin/match_videos/index'
+	end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -17,7 +17,7 @@ GIT
       paper_trail (~> 3.0.0.beta)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.0)
       actionpack (= 4.0.0)

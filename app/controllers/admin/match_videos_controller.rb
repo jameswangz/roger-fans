@@ -3,7 +3,7 @@ class Admin::MatchVideosController < Admin::BaseController
 
   # GET /admin/match_videos
   def index
-    @admin_match_videos = Admin::MatchVideo.all
+    @admin_match_videos = Admin::MatchVideo.ordered
   end
 
   # GET /admin/match_videos/1

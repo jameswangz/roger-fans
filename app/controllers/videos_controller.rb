@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
 
 	def index
-		@match_videos = Admin::MatchVideo.all
+		@match_videos = Admin::MatchVideo.ordered
 	end
 
 	def watch

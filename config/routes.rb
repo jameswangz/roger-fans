@@ -13,8 +13,12 @@ RogerFans::Application.routes.draw do
 			end
 		end
   		namespace :admin do
-  		  resources :matches
-  		  resources :match_videos
+  		  	resources :matches do
+				member do
+					get 'videos'
+				end
+			end
+  		  	resources :match_videos
   		end
 	end
 
