@@ -21,7 +21,7 @@ namespace :db do
 		video.update_attributes(opponent: '泽米亚', locale: 'zh-CN')
 		video = @french_open.videos.create!(year: 2013, round: 4, url: 'http://player.youku.com/player.php/sid/XNTY2Njc5OTE2/v.swf', opponent: 'Simeon')
 		video.update_attributes(opponent: '西蒙', locale: 'zh-CN')
-		video = @french_open.videos.create!(year: 2013, round: 3, url: 'http://player.youku.com/player.php/sid/XNTY1MDAwNjMy/v.swf', opponent: '贝内特乌')
+		video = @french_open.videos.create!(year: 2013, round: 3, url: 'http://player.youku.com/player.php/sid/XNTY1MDAwNjMy/v.swf', opponent: 'BeiNeiTeWu')
 		video.update_attributes(opponent: '贝内特乌', locale: 'zh-CN')
 	end
 
