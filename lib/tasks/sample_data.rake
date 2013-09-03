@@ -17,11 +17,11 @@ namespace :db do
 	end
 
 	def make_match_videos
-		video = @us_open.videos.create!(year: 2003, round: 1, url: 'http://player.cntv.cn/standard/cntvOutSidePlayer.swf?videoId=vid&videoCenterId=8f30196e18e247809d30d12ade7b74eb', opponent: 'Zhemiya')
+		video = @us_open.videos.create!(year: 2013, round: 1, url: 'http://player.cntv.cn/standard/cntvOutSidePlayer.swf?videoId=vid&videoCenterId=8f30196e18e247809d30d12ade7b74eb', opponent: 'Zhemiya')
 		video.update_attributes(opponent: '泽米亚', locale: 'zh-CN')
-		video = @french_open.videos.create!(year: 2013, round: 4, url: 'http://player.youku.com/player.php/sid/XNTY2Njc5OTE2/v.swf', opponent: 'Simeon')
+		video = @french_open.videos.create!(year: 2013, round: 4, url: 'http://player.youku.com/embed/XNTY2Njc5OTE2e>', opponent: 'Simeon')
 		video.update_attributes(opponent: '西蒙', locale: 'zh-CN')
-		video = @french_open.videos.create!(year: 2013, round: 3, url: 'http://player.youku.com/player.php/sid/XNTY1MDAwNjMy/v.swf', opponent: 'BeiNeiTeWu')
+		video = @french_open.videos.create!(year: 2013, round: 3, url: 'http://player.youku.com/embed/XNTY1MDAwNjMy', opponent: 'BeiNeiTeWu')
 		video.update_attributes(opponent: '贝内特乌', locale: 'zh-CN')
 	end
 
