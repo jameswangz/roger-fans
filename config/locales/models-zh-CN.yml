@@ -1,0 +1,8 @@
+zh-CN:
+  activerecord:
+    models:
+      admin/match: '比赛' 
+    attributes:
+      admin/match:
+        ordinal: '序号'
+        name: '名称'

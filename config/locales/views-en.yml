@@ -20,7 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: 'Roger Fans Site'
-  index_message: 'We all love Roger Federer!'
-  videos: 'Match Videos'
-  all_videos: 'All Match Videos'
+  views:
+    layouts:
+      menu:
+        site_name: 'Roger Fans'
+        index_message: 'We all love Roger Federer!'
+        videos: 'Match Videos'
+        all_videos: 'All Match Videos'
+        admin_management: 'Admin Management'
+        matches_management: 'Matches Management'
+        match_videos_management: 'Match Videos Management'

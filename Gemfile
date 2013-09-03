@@ -61,4 +61,4 @@ end
 gem 'http_accept_language'
 gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 gem 'paper_trail', github: 'airblade/paper_trail', branch: 'master'
-
+gem 'rails-i18n', '~> 4.0.0.pre'

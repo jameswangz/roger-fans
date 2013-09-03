@@ -10,6 +10,7 @@ RogerFans::Application.routes.draw do
 		resources :videos
   		namespace :admin do
   		  resources :matches
+  		  resources :match_videos
   		end
 	end
 

@@ -1,6 +1,13 @@
 zh-CN:
-  site_name: '费德勒粉丝网'
-  index_message: '我们都爱罗杰费德勒!'
-  videos: '比赛视频'
-  all_videos: '所有比赛视频'
-
+  views:
+    shared:
+      new: '新增'
+    layouts:
+      menu:
+        site_name: '费德勒粉丝网'
+        index_message: '我们都爱罗杰费德勒!'
+        videos: '比赛视频'
+        all_videos: '所有比赛视频'
+        admin_management: '后台管理'
+        matches_management: '赛事管理'
+        match_videos_management: '比赛视频管理'
