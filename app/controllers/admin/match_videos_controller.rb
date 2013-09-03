@@ -24,25 +24,28 @@ class Admin::MatchVideosController < ApplicationController
     @admin_match_video = Admin::MatchVideo.new(admin_match_video_params)
 
     if @admin_match_video.save
-      redirect_to @admin_match_video, notice: 'Match video was successfully created.'
+		flash[:success] = 'Match video was successfully created.'	
+      	redirect_to @admin_match_video
     else
-      render action: 'new'
+      	render action: 'new'
     end
   end
 
   # PATCH/PUT /admin/match_videos/1
   def update
     if @admin_match_video.update(admin_match_video_params)
-      redirect_to @admin_match_video, notice: 'Match video was successfully updated.'
+		flash[:success] = 'Match video was successfully updated.'	
+      	redirect_to @admin_match_video
     else
-      render action: 'edit'
+      	render action: 'edit'
     end
   end
 
   # DELETE /admin/match_videos/1
   def destroy
-    @admin_match_video.destroy
-    redirect_to admin_match_videos_url, notice: 'Match video was successfully destroyed.'
+   	@admin_match_video.destroy
+	flash[:success] = 'Match video was successfully destroyed.'	
+    redirect_to admin_match_videos_url
   end
 
   private
