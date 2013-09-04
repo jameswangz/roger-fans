@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902130251) do
+ActiveRecord::Schema.define(version: 20130904113526) do
 
   create_table "admin_match_translations", force: true do |t|
     t.integer  "admin_match_id", null: false
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20130902130251) do
     t.integer  "ordinal"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "glad_slam"
+    t.boolean  "grand_slam"
   end
 
   add_index "admin_matches", ["ordinal"], name: "index_admin_matches_on_ordinal", unique: true

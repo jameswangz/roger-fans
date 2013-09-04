@@ -6,14 +6,14 @@ namespace :db do
 	end
 
 	def make_matches
-		@australia_open = Admin::Match.create!(name: 'Australia Open', ordinal: 5)	
-		@australia_open.update_attributes(name: '澳网', locale: 'zh-CN')
-		@french_open = Admin::Match.create!(name: 'French Open', ordinal: 10)	
-		@french_open.update_attributes(name: '法网', locale: 'zh-CN')
-		@wimbledon = Admin::Match.create!(name: 'Wimbledon', ordinal: 15)	
-		@wimbledon.update_attributes(name: '温网', locale: 'zh-CN')
-		@us_open = Admin::Match.create!(name: 'US Open', ordinal: 20)	
-		@us_open.update_attributes(name: '美网', locale: 'zh-CN')
+		@australia_open = Admin::Match.create!(name: 'Australia Open', ordinal: 5, grand_slam: true)	
+		@australia_open.update_attributes(name: '澳网', locale: 'zh-CN', grand_slam: true)
+		@french_open = Admin::Match.create!(name: 'French Open', ordinal: 10, grand_slam: true)	
+		@french_open.update_attributes(name: '法网', locale: 'zh-CN', grand_slam: true)
+		@wimbledon = Admin::Match.create!(name: 'Wimbledon', ordinal: 15, grand_slam: true)	
+		@wimbledon.update_attributes(name: '温网', locale: 'zh-CN', grand_slam: true)
+		@us_open = Admin::Match.create!(name: 'US Open', ordinal: 20, grand_slam: true)	
+		@us_open.update_attributes(name: '美网', locale: 'zh-CN', grand_slam: true)
 	end
 
 	def make_match_videos

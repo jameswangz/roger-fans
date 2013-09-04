@@ -7,6 +7,7 @@ zh-CN:
       admin/match:
         ordinal: '序号'
         name: '名称'
+        grand_slam: '大满贯'
       admin/matchvideo:
         year: '年份'
         match: '赛事'

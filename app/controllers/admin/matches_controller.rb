@@ -75,6 +75,6 @@ class Admin::MatchesController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_match_params
-      params.require(:admin_match).permit(:ordinal, :name, :en_name, :cn_name)
+      params.require(:admin_match).permit(:ordinal, :name, :grand_slam)
     end
 end

@@ -6,7 +6,8 @@
       <th>English Name</th>
       <th>中文名</th>
       <th><%= t 'activerecord.attributes.admin/match.ordinal'  %></th>
-      <th><%= t 'views.match.videos_count'  %></th>
+      <th><%= t 'activerecord.attributes.admin/match.grand_slam'  %></th>
+      <th><%= t 'views.match.videos'  %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,6 +20,7 @@
         <td><%= admin_match.name('en') %></td>
         <td><%= admin_match.name('zh-CN') %></td>
         <td><%= admin_match.ordinal %></td>
+        <td><%= admin_match.grand_slam%></td>
         <td><%= link_to admin_match.videos.count, videos_admin_match_path(admin_match) %></td>
         <td><%= link_to 'Show', admin_match %></td>
         <td><%= link_to 'Edit', edit_admin_match_path(admin_match) %></td>
