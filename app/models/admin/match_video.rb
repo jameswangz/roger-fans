@@ -14,6 +14,26 @@ class Admin::MatchVideo < ActiveRecord::Base
 			.for_opponent(params[:opponent])
 			.ordered
 	end
+
+	def round_name
+		return I18n.t('activerecord.attributes.admin/matchvideo.final') if final?
+		return I18n.t('activerecord.attributes.admin/matchvideo.semi_final') if semi_final?
+		return I18n.t('activerecord.attributes.admin/matchvideo.quarter_final') if quarter_final?
+		I18n.t('activerecord.attributes.admin/matchvideo.round_name', round: round) 
+	end
+
+	def final?
+		(match.grand_slam? && round == 7) || (!match.grand_slam? && round == 6)
+	end
+
+	def semi_final?
+		(match.grand_slam? && round == 6) || (!match.grand_slam? && round == 5)
+	end
+
+	def quarter_final?
+		(match.grand_slam? && round == 5) || (!match.grand_slam? && round == 4)
+	end
+
 	
 
 end

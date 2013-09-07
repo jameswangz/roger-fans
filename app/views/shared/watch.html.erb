@@ -1,5 +1,5 @@
 <% if true %>
-	<%= @video.year %> <%= @video.match.name %> Round <%= @video.round %> VS <%= @video.opponent  %>
+	<%= @video.year %> <%= @video.match.name %> <%= @video.round_name %> VS <%= @video.opponent  %>
 	<iframe width=800 height=600 src="<%= @video.url %>" frameborder=0 allowfullscreen></iframe>
 <% else %>	
 	<embed src="<%= @video.url %>" allowFullScreen="true" quality="high" width="800" height="600" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>

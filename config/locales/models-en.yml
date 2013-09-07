@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    models:
+      admin/match: 'Match' 
+      admin/matchvideo: 'Match Video' 
+    attributes:
+      admin/match:
+        ordinal: 'Ordinal'
+        name: 'Name'
+        grand_slam: 'Grand Slam'
+      admin/matchvideo:
+        year: 'Year'
+        match: 'Match'
+        round: 'Round'
+        opponent: 'Opponent'
+        part: 'Part'
+        url: 'Url'
+        final: 'Final'
+        semi_final: 'Semi Final'
+        quarter_final: 'Quarter Final'
+        round_name: 'Round %{round}'

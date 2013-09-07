@@ -15,3 +15,7 @@ zh-CN:
         opponent: '对手'
         part: '部分'
         url: '地址'
+        final: '决赛'
+        semi_final: '半决赛'
+        quarter_final: '1/4 决赛'
+        round_name: '第 %{round} 轮'

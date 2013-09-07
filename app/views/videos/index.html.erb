@@ -16,7 +16,7 @@
       <tr>
 		<td><%= match_video.year %></td>
 		<td><%= match_video.match.try(:name) %></td>
-		<td><%= match_video.round %></td>
+		<td><%= match_video.round_name %></td>
 		<td><%= match_video.opponent %></td>
 		<td><%= match_video.part %></td>
 		<td><%= link_to t('views.videos.watch'), watch_video_path(match_video), target: '_blank' %></td>
