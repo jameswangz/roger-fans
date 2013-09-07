@@ -3,7 +3,7 @@
     <%= t 'activerecord.attributes.admin/matchvideo.year'  %>
     <%= number_field_tag :year, params[:year], class: 'span2' %>
     <%= t 'activerecord.attributes.admin/matchvideo.match'  %>
-	<%= select_tag(:match, options_for_select(Admin::Match.all.map { |m| [m.name, m.id] }, params[:match]), prompt: t('helpers.select.prompt'), class: 'span3') %>
+	<%= select_tag(:match_id, options_for_select(Admin::Match.all.map { |m| [m.name, m.id] }, params[:match_id]), prompt: t('helpers.select.prompt'), class: 'span3') %>
     <%= t 'activerecord.attributes.admin/matchvideo.opponent'  %>
     <%= text_field_tag :opponent, params[:opponent], class: 'span3' %>
     <%= submit_tag t('views.shared.search') %>
