@@ -1,7 +1,7 @@
 zh-CN:
   views:
     shared:
-      new: '新增'
+      search: '搜索'
     layouts:
       menu:
         site_name: '费德勒粉丝网'

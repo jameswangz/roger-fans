@@ -21,6 +21,8 @@
 
 en:
   views:
+    shared:
+      search: 'Search'
     layouts:
       menu:
         site_name: 'Roger Fans'
@@ -30,3 +32,5 @@ en:
         admin_management: 'Admin Management'
         matches_management: 'Matches Management'
         match_videos_management: 'Match Videos Management'
+    videos:
+       watch: 'Watch Video'
