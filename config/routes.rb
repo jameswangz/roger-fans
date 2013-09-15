@@ -22,6 +22,8 @@ RogerFans::Application.routes.draw do
   		end
 	end
 
+	get 'tweets' => 'tweets#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
