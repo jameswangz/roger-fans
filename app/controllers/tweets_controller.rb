@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
 			config.access_token_secret = "UXacI1BbPc6GWvKVMQPd2c6qcV4vnnhzasNs04O1H8"
 		end
 		
-		@content = client.user_timeline('rogerfederer')
+		@tweets = client.user_timeline('rogerfederer')
 
 	end
 

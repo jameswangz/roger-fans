@@ -1,1 +1,5 @@
-<%= @content %>
+<ul>
+<% @tweets.each do |t| %>
+	<li><%= t.text  %></li>
+<% end %>
+</ul>
