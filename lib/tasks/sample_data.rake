@@ -61,6 +61,8 @@ namespace :db do
 		video.update_attributes(opponent: '纳达尔', locale: 'zh-CN')
 		video = @us_open.videos.create!(year: 2008, round: 7, url: 'http://player.youku.com/embed/XMjk3OTM3NDQ0', opponent: 'Andy Murry')
 		video.update_attributes(opponent: '穆雷', locale: 'zh-CN')
+		video = @us_open.videos.create!(year: 2008, round: 6, url: 'http://player.youku.com/embed/XNDgyNDMxNjAw', opponent: 'Djokovic')
+		video.update_attributes(opponent: '德约科维奇', locale: 'zh-CN')
 		video = @wimbledon.videos.create!(year: 2008, round: 7, url: 'http://player.youku.com/embed/XODM2MTg1MDQ=', opponent: 'Rafael Nadal')
 		video.update_attributes(opponent: '纳达尔', locale: 'zh-CN')
 		video = @us_open.videos.create!(year: 2007, round: 7, url: 'http://player.youku.com/embed/XMzQxOTgzNzIw', opponent: 'Djokovic')
