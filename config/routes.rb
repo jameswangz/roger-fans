@@ -23,6 +23,7 @@ RogerFans::Application.routes.draw do
 	end
 
 	get 'tweets' => 'tweets#index'
+	get 'about' => 'home#about'
 
 
   # Example of regular route:
