@@ -1,5 +1,10 @@
 <ul>
 <% @tweets.each do |t| %>
-	<li><%= t  %></li>
+	<li>
+		<span class="content"><%= t.inspect %></span>
+		<span class="timestamp">
+			Posted <%#= time_ago_in_words(t.created_at) %> ago.
+		</span>
+	</li>
 <% end %>
 </ul>
