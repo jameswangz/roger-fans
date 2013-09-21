@@ -34,3 +34,6 @@ en:
         match_videos_management: 'Match Videos Management'
     videos:
        watch: 'Watch Video'
+    tweets:
+      index:
+        ago: ' ago'

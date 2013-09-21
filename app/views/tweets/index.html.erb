@@ -1,9 +1,23 @@
 <ol class="microposts">
 <% @tweets.each do |t| %>
 	<li>
-		<span class="content"><%= t.text %></span>
+		<span class="content">
+		<% urls = t.attrs[:entities][:urls] %>	
+		<% urls = urls.concat(t.attrs[:entities][:media]) if t.attrs[:entities][:media] %>
+		<% t.text.chars.each_with_index do |c, i|  %>
+<% url_found = false %>
+<% urls.each do |url| %>
+<% if url[:indices][0] == i  %>
+<a href="<%= url[:expanded_url] %>" target="_blank"><%= url[:display_url]  %></a> 
+<% end %>
+<% if i >= url[:indices][0] && i <= url[:indices][1]  %>
+<% url_found = true %>
+<% end %>
+<% end %>
+<%= c unless url_found %><% end %>
+		</span>
 		<span class="timestamp">
-			Posted <%= time_ago_in_words(t.created_at) %> ago.
+			Posted <%= time_ago_in_words(t.created_at) %><%= t 'views.tweets.index.ago' %>.
 		</span>
 	</li>
 <% end %>

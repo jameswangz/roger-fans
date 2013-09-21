@@ -13,3 +13,6 @@ zh-CN:
         match_videos_management: '比赛视频管理'
     videos:
        watch: '观看视频'
+    tweets:
+      index:
+        ago: '前'

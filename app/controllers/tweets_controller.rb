@@ -9,7 +9,5 @@ class TweetsController < ApplicationController
 		end
 		
 		@tweets = client.user_timeline('rogerfederer')
-
 	end
-
 end
