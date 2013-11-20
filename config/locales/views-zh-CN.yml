@@ -11,8 +11,14 @@ zh-CN:
         admin_management: '后台管理'
         matches_management: '赛事管理'
         match_videos_management: '比赛视频管理'
+      footer:
+        author: '王政'
+        about: '关于本站'
     videos:
        watch: '观看视频'
     tweets:
       index:
+        posted: '发表于'
         ago: '前'
+        newer: '<< 最近'
+        older: '之前 >>'

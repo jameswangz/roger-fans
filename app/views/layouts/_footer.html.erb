@@ -1,10 +1,10 @@
 <footer class="footer">
 	<small>
-		<%= t 'views.layouts.menu.site_name' %> by James Wang
+		<%= t 'views.layouts.menu.site_name' %> by <%= t 'views.layouts.footer.author' %> 
 	</small>
 	<nav>
 		<ul>
-			<li><%= link_to 'About', about_path %></li>
+			<li><%= link_to t('views.layouts.footer.about'), about_path %></li>
 		</ul>
 	</nav>
 </footer>

@@ -20,10 +20,10 @@ RogerFans::Application.routes.draw do
 			end
   		  	resources :match_videos
   		end
+		get 'tweets' => 'tweets#index'
+		get 'about' => 'home#about'
 	end
 
-	get 'tweets' => 'tweets#index'
-	get 'about' => 'home#about'
 
 
   # Example of regular route:

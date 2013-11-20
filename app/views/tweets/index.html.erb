@@ -17,8 +17,17 @@
 <%= c unless url_found %><% end %>
 		</span>
 		<span class="timestamp">
-			Posted <%= time_ago_in_words(t.created_at) %><%= t 'views.tweets.index.ago' %>.
+			<%= t('views.tweets.index.posted') %>  <%= time_ago_in_words(t.created_at) %><%= t 'views.tweets.index.ago' %>.
 		</span>
 	</li>
+
+	<%#= t.inspect %>	
+
 <% end %>
 </ol>
+<% if @max_id  %>
+	<%= link_to t('views.tweets.index.newer'), tweets_path(since_id: @max_id) %>
+<% end %>
+<% if @min_id  %>
+	<%= link_to t('views.tweets.index.older'), tweets_path(max_id: @min_id) %>
+<% end %>

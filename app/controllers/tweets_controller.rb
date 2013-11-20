@@ -8,6 +8,16 @@ class TweetsController < ApplicationController
 			config.access_token_secret = "UXacI1BbPc6GWvKVMQPd2c6qcV4vnnhzasNs04O1H8"
 		end
 		
-		@tweets = client.user_timeline('rogerfederer')
+		default_options = { count: 100 }
+		options = { }
+		options.merge! default_options
+		options[:max_id] = params[:max_id] if params[:max_id]
+		options[:since_id] = params[:since_id] if params[:since_id]
+		@tweets = client.user_timeline('rogerfederer', options)
+		@tweets = client.user_timeline('rogerfederer', default_options) if @tweets.empty?
+		unless @tweets.empty?
+			@min_id = @tweets.last.id
+			@max_id = @tweets.first.id
+		end
 	end
 end

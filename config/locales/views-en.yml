@@ -32,8 +32,14 @@ en:
         admin_management: 'Admin Management'
         matches_management: 'Matches Management'
         match_videos_management: 'Match Videos Management'
+      footer:
+        author: 'James Wang'
+        about: 'About'
     videos:
        watch: 'Watch Video'
     tweets:
       index:
+        posted: 'Posted'
         ago: ' ago'
+        newer: '<< Newer'
+        older: 'Older >>'
