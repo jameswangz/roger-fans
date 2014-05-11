@@ -59,8 +59,8 @@ end
 
 # i18n gems
 gem 'http_accept_language'
-gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
-gem 'paper_trail', github: 'airblade/paper_trail', branch: 'master'
+gem 'globalize', '~> 4.0.1'
+gem 'paper_trail', '~> 3.0.1'
 gem 'rails-i18n', '~> 4.0.0.pre'
 
 gem 'twitter', '5.0.0.rc.1'

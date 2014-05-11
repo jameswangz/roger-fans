@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20130904113526) do
     t.integer  "ordinal"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "glad_slam"
     t.boolean  "grand_slam"
   end
 
